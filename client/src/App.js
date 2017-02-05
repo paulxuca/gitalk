@@ -1,19 +1,36 @@
 import Inferno from 'inferno';
+import classnames from 'classnames';
 import Component from 'inferno-component';
-import Logo from './logo';
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.gitalk = window.gitalk;
+    
+    this.state = {
+      messageContainerOpen: false
+    };
+  }
+
+  toggleMessageContainer = () => this.setState({ messageContainerOpen: !this.state.messageContainerOpen });
+
   render() {
+    const classes = {
+      message__container: classnames({
+        'message__container': true,
+        'active': this.state.messageContainerOpen
+      })
+    };
+
     return (
-      <div className="App">
-        <div className="App-header">
-          <Logo width="80" height="80"/>
-          <h2>Welcome to Inferno</h2>
+      <div className="app__container">
+        <div className={classes.message__container}>
+          <div className="message__container-header">
+
+          </div>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <button onClick={this.toggleMessageContainer} className="message__container-toggle">Chat</button>
       </div>
     );
   }

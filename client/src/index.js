@@ -1,8 +1,12 @@
 import Inferno from 'inferno';
 import App from './App';
-import './index.css';
+import Gitalk from './lib/gitalk';
 
-Inferno.render(
-  <App />,
-  document.getElementById('app')
-);
+const initApp = () => {
+  Inferno.render(<App />, document.getElementById('app-gitalk'));
+};
+
+window.initGitalk = (endpoint, options) => {
+  window.gitalk = new Gitalk(endpoint, options);
+  initApp();
+}
