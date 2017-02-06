@@ -95,6 +95,10 @@ class App extends Component {
       app: classnames({
         'app__container': true,
         'active': this.state.isVisible
+      }),
+      toggleIcon: classnames({
+        'toggleIcon': true,
+        'active': this.state.messageContainerOpen
       })
     };
 
@@ -130,7 +134,9 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <button style={highlighted} onClick={this.toggleMessageContainer} className="message__container-toggle">Chat</button>
+        <button style={highlighted} onClick={this.toggleMessageContainer} className="message__container-toggle">
+          <div className={classes.toggleIcon}/>
+        </button>
       </div>
     );
   }
