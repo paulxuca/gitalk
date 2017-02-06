@@ -1,0 +1,7 @@
+{
+    "color": "MAIN_COLOR_HERE",
+    "header": {
+        "title": "Introduce yourself"
+    },
+    "initial": "inital message"
+}

@@ -9,7 +9,9 @@
     "babel-plugin-inferno": "^1.8.0",
     "classnames": "^2.2.5",
     "inferno": "^1.2.2",
-    "inferno-component": "^1.2.2"
+    "inferno-component": "^1.2.2",
+    "typeface-nunito": "^0.0.21",
+    "whatwg-fetch": "^2.0.2"
   },
   "scripts": {
     "start": "inferno-scripts start",

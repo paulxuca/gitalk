@@ -1,0 +1,9 @@
+{
+    "color": "#95D89F",
+    "text-color": "#FFFFFF",
+    "header": {
+        "title": "Chat with us!",
+        "subtitle": "Tell us your thoughts about our new app!"
+    },
+    "initial": "Hi there! Gitalk is a great way to chat with your customers directly through github. Try it out!"
+}
